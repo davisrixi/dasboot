@@ -43,6 +43,12 @@
       <groupId>com.h2database</groupId>
       <artifactId>h2</artifactId>
     </dependency>
+    <dependency>
+      <groupId>org.flywaydb</groupId>
+      <artifactId>flyway-maven-plugin</artifactId>
+      <version>4.0</version>
+    </dependency>
+
 
   </dependencies>
 </project>
