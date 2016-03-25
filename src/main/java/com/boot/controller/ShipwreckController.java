@@ -22,6 +22,13 @@ public class ShipwreckController {
     public List<Shipwreck> list(){
         return shipwreckRepository.findAll();
     }
+
+    @RequestMapping(value="shipwrecks", method = RequestMethod.POST)
+    public Shipwreck create(@RequestBody Shipwreck shipwreck){
+        return shipwreckRepository.saveAndFlush(shipwreck);
+    }
+
+
     @RequestMapping(value="shipwrecks/{id}", method = RequestMethod.GET)
     public Shipwreck get(@PathVariable Long id){
         return shipwreckRepository.findOne(id);
